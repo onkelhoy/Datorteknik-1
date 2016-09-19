@@ -6,15 +6,19 @@
 ; Student Ramus Skedinge
 ;
 ; Lab number: 1
-; Title: How to use the PORTs. Digital input/output. Subroutine call.
+; Title: Scanner up and down the led's
 ;
 ; Hardware: STK600, CPU ATmega2560
 ;
-; Function: adds and subtracts 
+; Function: scan's up and down the led's 
 ;
 ; Output ports: on-board LEDs connected to PORTB.
 ;
-; Subroutines: If applicable.
+; Subroutines: the "add" function adds a bitshift to the left to a register and 
+; does this until the leds are full then it subtracts a bitshift to the right 
+; with the sub function until it is empty the delay function is the same as in 
+; previous task
+
 ; Included files: m2560def.inc
 ;
 ; Other information: Johnson Counter in an infinite loop

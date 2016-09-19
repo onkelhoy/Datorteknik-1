@@ -30,13 +30,24 @@ ldi r20, low(ramend)
 out spl, r16
 
 
-ldi r19, 0x00
+ldi r21, 0x00 ; switch value
 ldi r20, 0x01
-ldi r21, 0xff ; switch value
+ldi r19, 0x00
+
+rjmp _add
 
 switch:
+	in r16, PIND	; 1 cycle
+	cpi r16, 0xff	; 1 cycle
+	brne switch		; 1 cycle if not
+
+	pop r16			; 2ycles
+	
 	com r21
 	brne ring_counter
+
+	ldi r20, 0x01
+	ldi r19, 0x00
 
 
 
@@ -64,18 +75,18 @@ _sub:
 
 
 
-deley:				; 4MHz -> 4000000 cycles = 1s,  Cycles = 3a + 4ab + 10abc   ->  a(3 + b(4 + 10c)),  (11, 237, 255) ~ 2 000 000
-	ldi r16, 1		; -> a
+deley:				; 4MHz -> 4000000 cycles = 1s,  Cycles = 3a + 4ab + 10abc   ->  a(3 + b(4 + 10c)),  ((250 * 10 + 4) * 100 + 3) * 8 = 2 003 224 ~ 2 000 000
+	ldi r16, 8		; -> a
 deley_1:
-	ldi r17, 1	; -> b
+	ldi r17, 100	; -> b
 deley_2:
-	ldi r18, 1	; -> c
+	ldi r18, 250	; -> c
 
 deley_3:
 	push r16		; 2cycles	 check if input
-	in r16, PINA	; 1 cycle
-	cpi r16, 0x01	; 1 cycle ( SW0 PA0 )
-	breq switch		; 1 cycle if not
+	in r16, PIND	; 1 cycle
+	cpi r16, 0xff	; 1 cycle
+	brne switch		; 1 cycle if not
 	pop r16			; 2ycles
 
 	dec r18
