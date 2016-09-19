@@ -8,7 +8,7 @@
 
 ; Replace with your application code
 init:
-	ldi r16, 0		; random output value
+	ldi r16, 1		; random output value
 	rjmp start
 
 
