@@ -5,14 +5,15 @@
 ; Student Henry Pap
 ; Student Ramus Skedinge
 ;
-; Lab number: 1
+; Lab number: 2
 ; Title: How to use the PORTs. Digital input/output. Subroutine call.
 ;
 ; Hardware: STK600, CPU ATmega2560
 ;
-; Function: adds and subtracts 
+; Function: ring counter, johnson counter and deley that checks for input value
 ;
-; Output ports: on-board LEDs connected to PORTB.
+; Output ports: PORTB
+; Input port: PORTA
 ;
 ; Subroutines: If applicable.
 ; Included files: m2560def.inc
@@ -72,9 +73,9 @@ deley_2:
 
 deley_3:
 	push r16		; 2cycles	 check if input
-	in r16, PINB	; 1 cycle
-	cpi r16, 0x00	; 1 cycle
-	brne switch		; 1 cycle if not
+	in r16, PINA	; 1 cycle
+	cpi r16, 0x01	; 1 cycle ( SW0 PA0 )
+	breq switch		; 1 cycle if not
 	pop r16			; 2ycles
 
 	dec r18

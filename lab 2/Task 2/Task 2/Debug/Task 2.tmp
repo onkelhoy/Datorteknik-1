@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega2560"</DEVICE>
+ <WORKING_DIR>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.106\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.106\avrasm\inc\m2560def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\Debug\Task 2.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Task 2.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Task 2.map</FILE>
+  <FILE>Task 2.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <init><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>10</LINE></init>
+  <loop><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>13</LINE></loop>
+  <output><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>24</LINE></output>
+  <dis_1><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>43</LINE></dis_1>
+  <dis_2><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>47</LINE></dis_2>
+  <dis_3><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>51</LINE></dis_3>
+  <dis_4><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>55</LINE></dis_4>
+  <dis_5><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>59</LINE></dis_5>
+  <dis_6><FILE>D:\Document\Skola\Datorteknik 1\lab 2\Task 2\Task 2\main.asm</FILE><LINE>63</LINE></dis_6>
+ </LABELS>
+</ASSEMBLER_INFO>
