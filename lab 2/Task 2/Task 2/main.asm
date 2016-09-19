@@ -9,16 +9,23 @@
 ; Replace with your application code
 init:
 	ldi r16, 0		; random output value
+	rjmp start
+
 
 loop:
+	in r17, PINA
+	cpi r17, 0xff
+	brne loop
+
+start:
 	inc r16
 	cpi r16, 7
 	breq init
 	
-	in r17, PIND
-	cpi r17, 0x00
+	in r17, PINA
+	cpi r17, 0xff
 	brne output
-	rjmp loop		; start over
+	rjmp start		; start over
 
 
 output:
