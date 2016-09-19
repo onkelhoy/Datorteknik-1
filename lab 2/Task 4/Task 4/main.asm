@@ -8,6 +8,11 @@
 
 ; Replace with your application code
 
+ldi r16, high(ramend)
+out sph, r16
+ldi r20, low(ramend)
+out spl, r16
+
 ldi r25, high(5000)	
 ldi	r24, low(5000)	; 5s
 
@@ -15,7 +20,7 @@ movw r25:r24, r27:r26
 
 
 loop:
-	deley
+	rcall deley
 	sbiw r27:r26, 1
 	brne loop		; while not 0 
 	
