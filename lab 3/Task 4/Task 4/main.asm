@@ -88,6 +88,15 @@ _break:
 	breq r
 
 
+r: 
+	ldi r18, 0xc0
+	add r17, r18
+	out ddrb, r17
+
+r: 
+	ldi r18, 0xc0
+	add r17, r18
+	out ddrb, r17
 
 
 deley:				; 4MHz -> 4000000 cycles = 1s,  Cycles = 3a + 4ab + 10abc   ->  a(3 + b(4 + 10c)),  ((250 * 10 + 4) * 100 + 3) * 8 = 2 003 224 ~ 2 000 000
